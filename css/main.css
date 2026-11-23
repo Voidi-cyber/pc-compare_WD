@@ -1,0 +1,9 @@
+/* main.css — Головний файл стилів: імпортує решту файлів у потрібному порядку. */
+
+@import url("variables.css");
+@import url("base.css");
+@import url("icons.css");
+@import url("components.css");
+@import url("layout.css");
+@import url("pages.css");
+@import url("responsive.css");

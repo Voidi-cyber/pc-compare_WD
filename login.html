@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вхід та реєстрація — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <main class="auth">
+    <div class="auth__inner">
+      <h1 class="visually-hidden">Вхід та реєстрація</h1>
+      <div class="auth__logo">
+        <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      </div>
+      <div class="auth-card">
+        <input type="radio" name="auth-tab" id="tab-login" class="visually-hidden" checked>
+        <input type="radio" name="auth-tab" id="tab-register" class="visually-hidden">
+
+        <div class="auth-tabs">
+          <label class="auth-tabs__label" for="tab-login">Вхід</label>
+          <label class="auth-tabs__label" for="tab-register">Реєстрація</label>
+        </div>
+
+        <form class="auth-form" id="panel-login" action="#" method="post" novalidate data-auth="login">
+          <div class="field">
+            <label class="field__label" for="login-email">Email</label>
+            <div class="input-wrap">
+              <input class="input" type="email" id="login-email" name="email" placeholder="example@email.com" autocomplete="email" data-rule="email" aria-describedby="login-email-error" required>
+            </div>
+            <p class="field__error" id="login-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="login-password">Пароль</label>
+            <div class="input-wrap input-wrap--toggle">
+              <input class="input" type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" data-rule="password" aria-describedby="login-password-error" required>
+              <button class="input-toggle" type="button" data-toggle-password aria-controls="login-password" aria-pressed="false">Показати</button>
+            </div>
+            <p class="field__error" id="login-password-error" hidden></p>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Увійти</button>
+          <a class="auth-form__link" href="#" data-forgot>Забули пароль?</a>
+          <p class="form-status" role="status" hidden></p>
+        </form>
+
+        <form class="auth-form" id="panel-register" action="#" method="post" novalidate data-auth="register">
+          <div class="field">
+            <label class="field__label" for="reg-email">Email</label>
+            <div class="input-wrap">
+              <input class="input" type="email" id="reg-email" name="email" placeholder="example@email.com" autocomplete="email" data-rule="email" aria-describedby="reg-email-error" required>
+            </div>
+            <p class="field__error" id="reg-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="reg-password">Пароль</label>
+            <div class="input-wrap input-wrap--toggle">
+              <input class="input" type="password" id="reg-password" name="password" placeholder="••••••••" autocomplete="new-password" data-rule="password" aria-describedby="reg-password-error" required>
+              <button class="input-toggle" type="button" data-toggle-password aria-controls="reg-password" aria-pressed="false">Показати</button>
+            </div>
+            <p class="field__error" id="reg-password-error" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="reg-password2">Повторіть пароль</label>
+            <div class="input-wrap input-wrap--toggle">
+              <input class="input" type="password" id="reg-password2" name="password2" placeholder="••••••••" autocomplete="new-password" data-rule="password2" aria-describedby="reg-password2-error" required>
+              <button class="input-toggle" type="button" data-toggle-password aria-controls="reg-password2" aria-pressed="false">Показати</button>
+            </div>
+            <p class="field__error" id="reg-password2-error" hidden></p>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Зареєструватися</button>
+          <p class="form-status" role="status" hidden></p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

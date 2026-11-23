@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Порівняння збірок — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="community-page page">
+  <main class="container container--table compare-page" data-compare-builds>
+    <h1>Порівняння збірок</h1>
+    <p class="community-head__text">Оберіть від 2 до 4 збірок, щоб порівняти їхні комплектуючі та вартість.</p>
+    <fieldset class="build-pick" id="build-pick">
+      <legend class="visually-hidden">Збірки для порівняння</legend>
+    </fieldset>
+    <p class="form-status form-status--danger" id="build-pick-status" role="status" hidden></p>
+    <div class="table-wrap" id="builds-table-wrap"></div>
+  </main>
+
+    <script src="js/utils.js"></script>
+  <script src="js/builds-data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare-builds.js"></script>
+</body>
+</html>

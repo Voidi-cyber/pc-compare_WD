@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Порівняння процесорів — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Відкрити меню</span><span class="burger__bar"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Основна навігація">
+        <ul>
+        <li><a href="compare.html" aria-current="page">Порівняння</a></li>
+        <li><a href="builder-empty.html">Конструктор</a></li>
+        <li><a href="community.html">Збірки</a></li>
+        <li><a class="btn btn--outline" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container container--table compare-page">
+    <h1 class="visually-hidden">Порівняння процесорів</h1>
+    <div class="table-wrap">
+        <table class="compare">
+          <caption class="visually-hidden">Порівняння характеристик та цін процесорів</caption>
+          <thead>
+            <tr>
+            <th scope="col">Характеристики</th>
+            <th scope="col">AMD Ryzen 5 7600</th>
+            <th scope="col">Intel Core i5-13400</th>
+            <th scope="col">AMD Ryzen 5 7600X</th>
+            <th scope="col">AMD Ryzen 9 7950X</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Кількість ядер</th>
+            <td>6</td>
+            <td>10</td>
+            <td>6</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <th scope="row">Кількість потоків</th>
+            <td>12</td>
+            <td>16</td>
+            <td>12</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <th scope="row">Сокет</th>
+            <td>AM5</td>
+            <td>LGA 1700</td>
+            <td>AM5</td>
+            <td>AM5</td>
+          </tr>
+          <tr>
+            <th scope="row">Базова частота</th>
+            <td>3.8 GHz</td>
+            <td>2.5 GHz</td>
+            <td>4.7 GHz</td>
+            <td>4.5 GHz</td>
+          </tr>
+          <tr>
+            <th scope="row">Чи є вбудована графіка</th>
+            <td>Так</td>
+            <td>Так</td>
+            <td>Так</td>
+            <td>Так</td>
+          </tr>
+          <tr>
+            <th scope="row">TDP</th>
+            <td>65 Вт</td>
+            <td>65 Вт</td>
+            <td>105 Вт</td>
+            <td>170 Вт</td>
+          </tr>
+          <tr>
+            <th scope="row">Тип пам’яті</th>
+            <td>DDR5</td>
+            <td>DDR4 / DDR5</td>
+            <td>DDR5</td>
+            <td>DDR5</td>
+          </tr>
+          </tbody>
+          <tbody class="compare__prices">
+          <tr>
+            <th scope="row">Rozetka</th>
+            <td>8 990 ₴</td>
+            <td>9 590 ₴</td>
+            <td>10 990 ₴</td>
+            <td>34 990 ₴</td>
+          </tr>
+          <tr>
+            <th scope="row">Prom</th>
+            <td>8 900 ₴</td>
+            <td>9 500 ₴</td>
+            <td>10 900 ₴</td>
+            <td>35 500 ₴</td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

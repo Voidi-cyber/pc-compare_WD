@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Комп'ютерні компоненти — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Відкрити меню</span><span class="burger__bar"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Основна навігація">
+        <ul>
+        <li><a href="compare-builds.html">Порівняння</a></li>
+        <li><a href="builder-empty.html">Конструктор</a></li>
+        <li><a href="community.html">Збірки</a></li>
+        <li><a class="btn btn--outline" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="catalog">
+      <aside class="catalog__filters" aria-labelledby="filters-title">
+        <h2 class="filters__title" id="filters-title">Фільтри</h2>
+        <form id="catalog-filters" action="#" method="get">
+          <fieldset class="filters__group">
+            <legend class="filters__legend">Бренд</legend>
+            <div class="filters__options">
+              <label class="check"><input type="checkbox" name="brand" value="intel" checked> Intel</label>
+              <label class="check"><input type="checkbox" name="brand" value="amd" checked> AMD</label>
+              <label class="check"><input type="checkbox" name="brand" value="samsung"> Samsung</label>
+              <label class="check"><input type="checkbox" name="brand" value="wd"> WD</label>
+              <label class="check"><input type="checkbox" name="brand" value="kingston"> Kingston</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="filters__group">
+            <legend class="filters__legend">Ціна (UAH)</legend>
+            <div class="filters__range-labels">
+              <span id="price-min-label">від 1 000 ₴</span>
+              <span id="price-max-label">до 50 000 ₴</span>
+            </div>
+            <div class="range">
+              <input type="range" id="price-min" name="price-min" min="1000" max="50000" step="500" value="1000" aria-label="Мінімальна ціна">
+              <input type="range" id="price-max" name="price-max" min="1000" max="50000" step="500" value="50000" aria-label="Максимальна ціна">
+            </div>
+          </fieldset>
+
+          <div class="filters__group field">
+            <label class="filters__legend" for="socket">Сокет</label>
+            <select class="select" id="socket" name="socket">
+              <option value="">Усі сокети</option>
+              <option value="am5">AM5</option>
+              <option value="lga1700">LGA 1700</option>
+            </select>
+          </div>
+        </form>
+      </aside>
+
+      <section class="catalog__main" aria-labelledby="catalog-title">
+        <div class="catalog__head">
+          <h1 id="catalog-title">Комп'ютерні компоненти</h1>
+          <div class="sort">
+            <label for="sort">Сортувати за:</label>
+            <select class="select" id="sort" name="sort">
+              <option value="price-asc">Від дешевих до дорогих</option>
+              <option value="price-desc">Від дорогих до дешевих</option>
+              <option value="name">За назвою</option>
+            </select>
+          </div>
+        </div>
+
+        <ul class="product-grid" data-catalog>
+          <li data-id="ryzen-5-7600" data-name="AMD Ryzen 5 7600" data-brand="amd" data-price="8900" data-socket="am5">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">AMD Ryzen 5 7600</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 6</li>
+                  <li>Потоки: 12</li>
+                  <li>Сокет: AM5</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 8 900 ₴</p>
+                  <button class="btn btn--success btn--sm" type="button" data-compare-toggle="ryzen-5-7600" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="true">Додано до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="i5-13400" data-name="Intel Core i5-13400" data-brand="intel" data-price="9500" data-socket="lga1700">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Intel Core i5-13400</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 10</li>
+                  <li>Потоки: 16</li>
+                  <li>Сокет: LGA 1700</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 9 500 ₴</p>
+                  <button class="btn btn--success btn--sm" type="button" data-compare-toggle="i5-13400" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="true">Додано до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="ryzen-5-7600x" data-name="AMD Ryzen 5 7600X" data-brand="amd" data-price="10900" data-socket="am5">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">AMD Ryzen 5 7600X</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 6</li>
+                  <li>Потоки: 12</li>
+                  <li>Сокет: AM5</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 10 900 ₴</p>
+                  <button class="btn btn--success btn--sm" type="button" data-compare-toggle="ryzen-5-7600x" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="true">Додано до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="i5-13600k" data-name="Intel Core i5-13600K" data-brand="intel" data-price="14500" data-socket="lga1700">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Intel Core i5-13600K</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 14</li>
+                  <li>Потоки: 20</li>
+                  <li>Сокет: LGA 1700</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 14 500 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="i5-13600k" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="false">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="ryzen-7-7700x" data-name="AMD Ryzen 7 7700X" data-brand="amd" data-price="18900" data-socket="am5">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">AMD Ryzen 7 7700X</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 8</li>
+                  <li>Потоки: 16</li>
+                  <li>Сокет: AM5</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 18 900 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="ryzen-7-7700x" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="false">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="i7-13700k" data-name="Intel Core i7-13700K" data-brand="intel" data-price="23900" data-socket="lga1700">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Intel Core i7-13700K</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 16</li>
+                  <li>Потоки: 24</li>
+                  <li>Сокет: LGA 1700</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 23 900 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="i7-13700k" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="false">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="ryzen-9-7900x" data-name="AMD Ryzen 9 7900X" data-brand="amd" data-price="29900" data-socket="am5">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">AMD Ryzen 9 7900X</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 12</li>
+                  <li>Потоки: 24</li>
+                  <li>Сокет: AM5</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 29 900 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="ryzen-9-7900x" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="false">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="i9-13900k" data-name="Intel Core i9-13900K" data-brand="intel" data-price="31500" data-socket="lga1700">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Intel Core i9-13900K</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 24</li>
+                  <li>Потоки: 32</li>
+                  <li>Сокет: LGA 1700</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 31 500 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="i9-13900k" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="false">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="ryzen-9-7950x" data-name="AMD Ryzen 9 7950X" data-brand="amd" data-price="34990" data-socket="am5">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">AMD Ryzen 9 7950X</a></h2>
+                <ul class="product-card__specs">
+                  <li>Кількість ядер: 16</li>
+                  <li>Потоки: 32</li>
+                  <li>Сокет: AM5</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 34 990 ₴</p>
+                  <button class="btn btn--success btn--sm" type="button" data-compare-toggle="ryzen-9-7950x" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary" aria-pressed="true">Додано до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="empty-state" id="catalog-empty" hidden>
+          <p>За вибраними фільтрами нічого не знайдено.</p>
+          <button class="btn btn--outline btn--sm" type="button" id="catalog-reset">Скинути фільтри</button>
+        </div>
+        <p class="visually-hidden" id="catalog-count" role="status"></p>
+      </section>
+    </div>
+
+    <div class="compare-bar">
+      <p class="compare-bar__info"><span class="icon icon--compare" aria-hidden="true"></span><span>Обрано до порівняння: <span data-compare-count>4</span></span></p>
+      <a class="btn btn--primary btn--md" href="compare.html" data-compare-link>Порівняти</a>
+    </div>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Конструктор збірки — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Відкрити меню</span><span class="burger__bar"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Основна навігація">
+        <ul>
+        <li><a href="compare-builds.html">Порівняння</a></li>
+        <li><a href="builder-empty.html" aria-current="page">Конструктор</a></li>
+        <li><a href="community.html">Збірки</a></li>
+        <li><a class="btn btn--outline" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container container--builder builder-page" data-builder="empty">
+    <div class="builder-head">
+      <h1 class="builder-head__title">Конструктор збірки</h1>
+      <p class="builder-head__text" id="builder-subtitle">3 компоненти вибрано. Сумісність перевірена автоматично.</p>
+    </div>
+
+    <div class="builder">
+      <ul class="builder__list" id="builder-list">
+      <li>
+        <article class="card component">
+          <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">AMD Ryzen 5 7600</h2>
+              <span class="badge badge--success">Сумісно</span>
+            </div>
+            <p class="component__desc">6 ядер, 12 потоків, 3.8–5.1 ГГц</p>
+          <p class="component__price">14 990 ₴</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Змінити</a>
+        </article>
+      </li>
+      <li>
+        <article class="card component">
+          <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">ASUS B650</h2>
+              <span class="badge badge--success">Сумісно</span>
+            </div>
+            <p class="component__desc">Материнська плата, Socket AM5, DDR5, USB 3.2 Gen 2</p>
+          <p class="component__price">12 490 ₴</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Змінити</a>
+        </article>
+      </li>
+      <li>
+        <article class="card component">
+          <span class="icon-tile" aria-hidden="true"><span class="icon icon--gear"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">DDR5 16GB</h2>
+              <span class="badge badge--success">Сумісно</span>
+            </div>
+            <p class="component__desc">Оперативна пам’ять, 5200 МГц, C40, 1×16 ГБ</p>
+          <p class="component__price">4 990 ₴</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Змінити</a>
+        </article>
+      </li>
+      <li>
+        <article class="card component component--empty">
+          <span class="icon-tile icon-tile--muted" aria-hidden="true"><span class="icon icon--drive"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">SSD</h2>
+              
+            </div>
+            <p class="component__desc">Виберіть накопичувач для швидкого завантаження системи.</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Додати</a>
+        </article>
+      </li>
+      <li>
+        <article class="card component component--empty">
+          <span class="icon-tile icon-tile--muted" aria-hidden="true"><span class="icon icon--drive"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">Блок живлення</h2>
+              
+            </div>
+            <p class="component__desc">Виберіть блок живлення з достатньою потужністю для збірки.</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Додати</a>
+        </article>
+      </li>
+      <li>
+        <article class="card component component--empty">
+          <span class="icon-tile icon-tile--muted" aria-hidden="true"><span class="icon icon--drive"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">Корпус</h2>
+              
+            </div>
+            <p class="component__desc">Виберіть корпус під розмір материнської плати та блок живлення.</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Додати</a>
+        </article>
+      </li>
+      <li>
+        <article class="card component component--empty">
+          <span class="icon-tile icon-tile--muted" aria-hidden="true"><span class="icon icon--drive"></span></span>
+          <div class="component__body">
+            <div class="component__head">
+              <h2 class="component__title">Система охолодження</h2>
+              
+            </div>
+            <p class="component__desc">Виберіть радіатор або кулер для процесора.</p>
+          </div>
+          <a class="btn btn--outline btn--sm" href="components.html">Додати</a>
+        </article>
+      </li>
+      </ul>
+
+      <aside class="builder__aside" aria-label="Підсумок збірки та AI-помічник">
+<div id="builder-summary">
+        <section class="card summary" aria-labelledby="summary-title">
+          <div class="summary__head">
+            <div>
+              <h2 class="summary__title" id="summary-title">Резюме збірки</h2>
+              <p class="summary__sub">3 компоненти вибрано</p>
+            </div>
+            <span class="badge badge--success">Конфліктів немає</span>
+          </div>
+          <div class="stat">
+            <p class="stat__label">Загальна ціна</p>
+            <p class="stat__value">32 470 ₴</p>
+          </div>
+          <div class="stat">
+            <p class="stat__label">Потужність</p>
+            <p class="stat__value">180 / 650 Вт</p>
+          </div>
+          <div class="summary-item">
+            <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+            <div class="summary-item__body">
+              <p class="summary-item__title">AMD Ryzen 5 7600</p>
+              <p class="summary-item__sub">Материнська плата: ASUS B650</p>
+            </div>
+            <span class="badge badge--success">Сумісно</span>
+          </div>
+        </section>
+
+        </div>
+        <section class="card ai-card" aria-labelledby="ai-title">
+          <span class="ai-mark" aria-hidden="true">AI</span>
+          <div>
+            <h2 class="ai-card__title" id="ai-title">Твій AI-помічник у збірці ПК</h2>
+            <p class="ai-card__text">Попроси пораду щодо наступного компонента або перевір сумісність збірки.</p>
+          </div>
+        </section>
+        <a class="btn btn--ai btn--block" href="assistant.html">Напишіть свої питання...</a>
+        <p class="ai-disclaimer">*Дисклеймер - ви маєте не більше 20 запитів на день</p>
+      </aside>
+    </div>
+  </main>
+
+  <dialog class="picker" id="picker" aria-labelledby="picker-title">
+    <form class="picker__form" id="picker-form" method="dialog">
+      <h2 class="picker__title" id="picker-title">Оберіть компонент</h2>
+      <fieldset class="picker__options" id="picker-options"></fieldset>
+      <div class="picker__actions">
+        <button class="btn btn--primary" type="submit" value="ok">Обрати</button>
+        <button class="btn btn--outline" type="submit" value="cancel" formnovalidate>Скасувати</button>
+        <button class="btn btn--outline picker__remove" type="button" id="picker-remove" hidden>Прибрати зі збірки</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

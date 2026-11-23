@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-асистент — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page">
+  <div class="app-shell">
+    <div class="app-shell__content">
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Відкрити меню</span><span class="burger__bar"></span></button>
+      <nav class="main-nav main-nav--lg" id="main-nav" aria-label="Основна навігація">
+        <ul>
+        <li><a href="builder.html">Конфігурація</a></li>
+        <li><a href="components.html">Компоненти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+      <main class="assistant-page">
+        <h1 class="assistant-page__title">Компоненти</h1>
+        <p class="assistant-page__text">Виберіть компоненти для вашого комп'ютера</p>
+
+        <section class="parts-group" aria-labelledby="g-cpu">
+          <h2 class="parts-group__title" id="g-cpu">Процесор</h2>
+        <article class="part">
+          <span class="part__thumb" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+          <div class="part__body">
+            <h3 class="part__title">AMD Ryzen 9 7950X</h3>
+            <p class="part__desc">16 ядер • 32 потоки • 5.7 GHz</p>
+          </div>
+          <p class="part__price">34.990 грн.</p>
+        </article>
+        </section>
+
+        <section class="parts-group" aria-labelledby="g-mb">
+          <h2 class="parts-group__title" id="g-mb">Материнська плата</h2>
+        <article class="part">
+          <span class="part__thumb" aria-hidden="true"><span class="icon icon--drive"></span></span>
+          <div class="part__body">
+            <h3 class="part__title">ASUS B650</h3>
+            <p class="part__desc">Материнська плата, Socket AM5, DDR5, USB 3.2 Gen 2</p>
+          </div>
+          <p class="part__price">5 879 грн.</p>
+        </article>
+        </section>
+
+        <section class="parts-group" aria-labelledby="g-ram">
+          <h2 class="parts-group__title" id="g-ram">ОЗУ</h2>
+        <article class="part">
+          <span class="part__thumb" aria-hidden="true"><span class="icon icon--gear"></span></span>
+          <div class="part__body">
+            <h3 class="part__title">Corsair Vengeance LPX 64GB (2×32GB)</h3>
+            <p class="part__desc">DDR5 • 5200 MHz • C40</p>
+          </div>
+          <p class="part__price">31.000 грн.</p>
+        </article>
+        </section>
+      </main>
+    </div>
+
+    <aside class="chat" aria-labelledby="chat-title">
+      <div class="chat__head">
+        <h2 class="chat__title" id="chat-title">AI-асистент</h2>
+        <a class="icon-btn" href="builder-conflict.html" aria-label="Закрити чат"><span class="icon icon--close" aria-hidden="true"></span></a>
+      </div>
+
+      <div class="chat__messages" role="log" aria-live="polite">
+        <div class="message message--user">
+          <p class="message__bubble">Чому мій процесор несумісний з материнською платою?</p>
+          <p class="message__meta">Ви • 14:02</p>
+        </div>
+        <div class="message message--ai">
+          <p class="message__bubble">Проблема полягає в тому, що процесор AMD Ryzen 9 7950X використовує сокет AM5, тоді як материнська плата ASRock Z790 Extreme підтримує лише сокет LGA 1700 для процесорів Intel Core 13-го покоління. Ці два сокети не сумісні. Варіанти усунення: 1) Замінити материнську плату на ASRock X670E Taichi (AM5) за $499. 2) Замінити процесор на Intel Core i9-13900K (LGA 1700) за $649.</p>
+          <p class="message__meta">AI • 14:03</p>
+        </div>
+        <p class="chat__note">Рекомендації не гарантують сумісність</p>
+      </div>
+
+      <div class="chat__footer">
+        <p class="chat__quota"><span>Залишилось запитів: <span id="quota-left">17</span>/20</span><span class="badge badge--primary">Преміум</span></p>
+        <form class="chat__form" id="chat-form" action="#" method="post" novalidate>
+          <label class="visually-hidden" for="chat-input">Ваше повідомлення</label>
+          <input class="input" type="text" id="chat-input" name="message" placeholder="Напишіть повідомлення..." autocomplete="off" aria-describedby="chat-input-error">
+          <button class="btn btn--primary chat__send" type="submit" aria-label="Надіслати"><span class="icon icon--send" aria-hidden="true"></span></button>
+        </form>
+        <p class="field__error chat__error" id="chat-input-error" hidden></p>
+      </div>
+    </aside>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

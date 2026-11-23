@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Збірки спільноти — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="community-page page">
+  <main class="container container--page community-main">
+    <div class="community-head">
+      <div>
+        <h1>Збірки спільноти</h1>
+        <p class="community-head__text">Перегляньте та скопіюйте найкращі конфігурації від користувачів</p>
+      </div>
+      <form class="search" role="search" action="#" method="get">
+        <span class="icon icon--search" aria-hidden="true"></span>
+        <label class="visually-hidden" for="search-builds">Пошук збірки</label>
+        <input class="input" type="search" id="search-builds" name="q" placeholder="Пошук збірки...">
+      </form>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar__filter">
+        <label for="budget">Бюджет:</label>
+        <select class="select select--pill" id="budget" name="budget">
+          <option value="50000">До 50 000 ₴</option>
+          <option value="30000">До 30 000 ₴</option>
+          <option value="100000">До 100 000 ₴</option>
+        </select>
+      </div>
+      <div class="toolbar__filter toolbar__sort">
+        <label for="sort-builds">Сортувати:</label>
+        <select class="select select--link" id="sort-builds" name="sort">
+          <option value="popular">Популярні</option>
+          <option value="new">Нові</option>
+          <option value="price-asc">Від дешевих до дорогих</option>
+        </select>
+      </div>
+    </div>
+
+    <ul class="card-grid" data-builds>
+        <li>
+          <article class="card build-public" data-price="32450" data-popular="0" data-date="2024-05-02" data-search="геймерський старт олександр к. amd ryzen 5 7600 nvidia geforce rtx 4060 16 gb ddr5 5200 mhz">
+            <div class="build-public__head">
+              <h2 class="build-public__title">Геймерський старт</h2>
+              <p class="author"><span class="icon icon--user" aria-hidden="true"></span>Олександр К.</p>
+            </div>
+            <dl class="spec-list">
+              <div class="spec-list__row"><dt>CPU</dt><dd>AMD Ryzen 5 7600</dd></div>
+              <div class="spec-list__row"><dt>GPU</dt><dd>NVIDIA GeForce RTX 4060</dd></div>
+              <div class="spec-list__row"><dt>RAM</dt><dd>16 GB DDR5 5200 MHz</dd></div>
+            </dl>
+            <div class="build-public__footer">
+              <p class="build-public__price">32 450 ₴</p>
+              <a class="btn btn--primary btn--md" href="builder.html">Відкрити в конструкторі <span class="icon icon--arrow" aria-hidden="true"></span></a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card build-public" data-price="84900" data-popular="1" data-date="2024-04-11" data-search="4k студія марія д. amd ryzen 9 7950x nvidia geforce rtx 4080 64 gb ddr5 6400 mhz">
+            <div class="build-public__head">
+              <h2 class="build-public__title">4K Студія</h2>
+              <p class="author"><span class="icon icon--user" aria-hidden="true"></span>Марія Д.</p>
+            </div>
+            <dl class="spec-list">
+              <div class="spec-list__row"><dt>CPU</dt><dd>AMD Ryzen 9 7950X</dd></div>
+              <div class="spec-list__row"><dt>GPU</dt><dd>NVIDIA GeForce RTX 4080</dd></div>
+              <div class="spec-list__row"><dt>RAM</dt><dd>64 GB DDR5 6400 MHz</dd></div>
+            </dl>
+            <div class="build-public__footer">
+              <p class="build-public__price">84 900 ₴</p>
+              <a class="btn btn--primary btn--md" href="builder.html">Відкрити в конструкторі <span class="icon icon--arrow" aria-hidden="true"></span></a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card build-public" data-price="24100" data-popular="2" data-date="2024-06-20" data-search="офісний компакт іван п. intel core i5-13400 intel iris xe 16 gb ddr4 3200 mhz">
+            <div class="build-public__head">
+              <h2 class="build-public__title">Офісний компакт</h2>
+              <p class="author"><span class="icon icon--user" aria-hidden="true"></span>Іван П.</p>
+            </div>
+            <dl class="spec-list">
+              <div class="spec-list__row"><dt>CPU</dt><dd>Intel Core i5-13400</dd></div>
+              <div class="spec-list__row"><dt>GPU</dt><dd>Intel Iris Xe</dd></div>
+              <div class="spec-list__row"><dt>RAM</dt><dd>16 GB DDR4 3200 MHz</dd></div>
+            </dl>
+            <div class="build-public__footer">
+              <p class="build-public__price">24 100 ₴</p>
+              <a class="btn btn--primary btn--md" href="builder.html">Відкрити в конструкторі <span class="icon icon--arrow" aria-hidden="true"></span></a>
+            </div>
+          </article>
+        </li>
+    </ul>
+    <p class="empty-state" id="builds-empty" hidden>Збірок за вашим запитом не знайдено.</p>
+  </main>
+  <dialog class="picker details" id="build-details" aria-labelledby="details-title">
+    <div class="picker__form">
+      <h2 class="picker__title" id="details-title">Збірка</h2>
+      <p class="details__author" id="details-author"></p>
+      <dl class="spec-list" id="details-parts"></dl>
+      <p class="details__total"><span>Орієнтовна вартість</span> <strong id="details-price"></strong></p>
+      <div class="picker__actions">
+        <a class="btn btn--primary" href="builder.html">Відкрити в конструкторі</a>
+        <button class="btn btn--outline" type="button" id="details-close">Закрити</button>
+      </div>
+    </div>
+  </dialog>
+  <script src="js/utils.js"></script>
+  <script src="js/builds-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

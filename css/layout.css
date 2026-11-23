@@ -1,0 +1,158 @@
+/* layout.css — Каркаси сторінок: контейнери, Flexbox- та Grid-макети. */
+
+/* ---------- Контейнери ---------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 48px);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+.container--builder {
+  max-width: calc(1160px + 48px);
+}
+
+.container--wide {
+  max-width: none;
+  padding-inline: var(--space-6);
+}
+
+.container--page {
+  max-width: none;
+  padding-inline: var(--space-7);
+}
+
+.container--table {
+  max-width: calc(1100px + 48px);
+}
+
+/* ---------- Універсальні сітки ---------- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* ---------- Каталог: бічна панель + список (Grid) ---------- */
+.catalog {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.catalog__filters {
+  padding: var(--space-6);
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.catalog__main {
+  padding: var(--space-5) var(--space-6) var(--space-6);
+  background: var(--color-bg);
+}
+
+.catalog__head h1 {
+  font-size: var(--fs-xl);
+}
+
+.catalog__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.compare-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+/* ---------- Конструктор збірки (Grid) ---------- */
+.builder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 448px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.builder__list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.builder__aside {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* ---------- Сторінка товару (Grid) ---------- */
+.product-hero {
+  display: grid;
+  grid-template-columns: 560px minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* ---------- AI-асистент: контент + бічна панель (Grid) ---------- */
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  min-height: 100vh;
+}
+
+.app-shell__content {
+  min-width: 0;
+}
+
+.chat {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border-left: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-popup);
+}
+
+/* ---------- Службова сторінка (404) ---------- */
+.center-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  text-align: center;
+}
+
+/* Елементи списків-сіток розтягуються на всю висоту рядка */
+.product-grid > li {
+  display: flex;
+}
+
+.product-grid > li > .product-card {
+  flex: 1;
+}

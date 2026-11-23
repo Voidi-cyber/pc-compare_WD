@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мої збірки — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="profile-page page">
+  <header class="site-header site-header--profile">
+    <div class="container container--page site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <div class="user">
+        <div class="user__info">
+          <p class="user__name">Олександр Коваль</p>
+          <p class="user__role">Pro Builder</p>
+        </div>
+        <span class="user__avatar" aria-hidden="true">ОК</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container container--page profile-main">
+    <h1 class="visually-hidden">Особистий кабінет</h1>
+    <div class="tabs" role="tablist" aria-label="Розділи профілю">
+      <button class="tabs__item" type="button" role="tab" id="tab-builds" aria-controls="panel-builds" aria-selected="true">Мої збірки</button>
+      <button class="tabs__item" type="button" role="tab" id="tab-watch" aria-controls="panel-watch" aria-selected="false" tabindex="-1">Стежу за ціною</button>
+    </div>
+
+    <div role="tabpanel" id="panel-builds" aria-labelledby="tab-builds">
+      <ul class="card-grid">
+        <li>
+          <article class="card build-card" data-build="1">
+            <h2 class="build-card__title">Gaming Beast 2024</h2>
+            <label class="build-card__visibility" for="public-1">
+              <span>Публічна збірка</span>
+              <input class="switch" type="checkbox" role="switch" id="public-1">
+            </label>
+            <dl class="spec-list">
+              <div class="spec-list__row"><dt>CPU</dt><dd>AMD Ryzen 9 7950X</dd></div>
+              <div class="spec-list__row"><dt>GPU</dt><dd>NVIDIA GeForce RTX 4090</dd></div>
+              <div class="spec-list__row"><dt>RAM</dt><dd>Corsair Vengeance 64GB DDR5</dd></div>
+              <div class="spec-list__row"><dt>Storage</dt><dd>Samsung 990 PRO 2TB</dd></div>
+            </dl>
+            <div class="build-card__total">
+              <p class="build-card__total-label">Загальна вартість</p>
+              <p class="build-card__price">$3,450.00</p>
+              <div class="build-card__actions">
+                <a class="btn btn--outline btn--sm" href="builder.html">Відкрити</a>
+                <button class="btn btn--primary btn--md" type="button" data-publish>Опублікувати</button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card build-card" data-build="2">
+            <h2 class="build-card__title">Content Creator</h2>
+            <label class="build-card__visibility" for="public-2">
+              <span>Публічна збірка</span>
+              <input class="switch" type="checkbox" role="switch" id="public-2">
+            </label>
+            <dl class="spec-list">
+              <div class="spec-list__row"><dt>CPU</dt><dd>AMD Ryzen 9 7900X</dd></div>
+              <div class="spec-list__row"><dt>GPU</dt><dd>NVIDIA GeForce RTX 4080</dd></div>
+              <div class="spec-list__row"><dt>RAM</dt><dd>Corsair Vengeance 32GB DDR5</dd></div>
+              <div class="spec-list__row"><dt>Storage</dt><dd>Samsung 980 PRO 1TB</dd></div>
+            </dl>
+            <div class="build-card__total">
+              <p class="build-card__total-label">Загальна вартість</p>
+              <p class="build-card__price">$2,850.00</p>
+              <div class="build-card__actions">
+                <a class="btn btn--outline btn--sm" href="builder.html">Відкрити</a>
+                <button class="btn btn--primary btn--md" type="button" data-publish>Опублікувати</button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card build-card" data-build="3">
+            <h2 class="build-card__title">Budget Gamer</h2>
+            <label class="build-card__visibility" for="public-3">
+              <span>Публічна збірка</span>
+              <input class="switch" type="checkbox" role="switch" id="public-3">
+            </label>
+            <dl class="spec-list">
+              <div class="spec-list__row"><dt>CPU</dt><dd>AMD Ryzen 5 7600</dd></div>
+              <div class="spec-list__row"><dt>GPU</dt><dd>NVIDIA GeForce RTX 4060</dd></div>
+              <div class="spec-list__row"><dt>RAM</dt><dd>Corsair Vengeance 16GB DDR5</dd></div>
+              <div class="spec-list__row"><dt>Storage</dt><dd>Western Digital Black SN850 1TB</dd></div>
+            </dl>
+            <div class="build-card__total">
+              <p class="build-card__total-label">Загальна вартість</p>
+              <p class="build-card__price">$1,200.00</p>
+              <div class="build-card__actions">
+                <a class="btn btn--outline btn--sm" href="builder.html">Відкрити</a>
+                <button class="btn btn--primary btn--md" type="button" data-publish>Опублікувати</button>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+    <section class="server-builds" aria-labelledby="server-builds-title">
+      <h2 class="server-builds__title" id="server-builds-title">Збережені на сервері</h2>
+      <p class="form-status" id="server-builds-status" role="status" hidden></p>
+      <ul class="card-grid" id="server-builds"></ul>
+    </section>
+    </div>
+
+    <div role="tabpanel" id="panel-watch" aria-labelledby="tab-watch" hidden>
+      <ul class="card-grid" id="watch-list"></ul>
+      <p class="empty-state" id="watch-empty">Ви ще не стежите за жодним товаром. <a href="components.html">Перейти до каталогу</a></p>
+    </div>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

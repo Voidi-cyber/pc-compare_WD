@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Накопичувачі SSD та HDD — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page" data-compare-scope="storage">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Відкрити меню</span><span class="burger__bar"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Основна навігація">
+        <ul>
+        <li><a href="compare-builds.html">Порівняння</a></li>
+        <li><a href="builder-empty.html">Конструктор</a></li>
+        <li><a href="community.html">Збірки</a></li>
+        <li><a class="btn btn--outline" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="catalog">
+      <aside class="catalog__filters" aria-labelledby="filters-title">
+        <h2 class="filters__title" id="filters-title">Фільтри</h2>
+        <form id="catalog-filters" action="#" method="get">
+          <fieldset class="filters__group">
+            <legend class="filters__legend">Бренд</legend>
+            <div class="filters__options">
+              <label class="check"><input type="checkbox" name="brand" value="wd"> WD</label>
+              <label class="check"><input type="checkbox" name="brand" value="samsung"> Samsung</label>
+              <label class="check"><input type="checkbox" name="brand" value="kingston"> Kingston</label>
+              <label class="check"><input type="checkbox" name="brand" value="seagate"> Seagate</label>
+              <label class="check"><input type="checkbox" name="brand" value="toshiba"> Toshiba</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="filters__group">
+            <legend class="filters__legend">Ціна (UAH)</legend>
+            <div class="filters__range-labels">
+              <span id="price-min-label">від 1 000 ₴</span>
+              <span id="price-max-label">до 7 000 ₴</span>
+            </div>
+            <div class="range">
+              <input type="range" id="price-min" name="price-min" min="1000" max="7000" step="100" value="1000" aria-label="Мінімальна ціна">
+              <input type="range" id="price-max" name="price-max" min="1000" max="7000" step="100" value="7000" aria-label="Максимальна ціна">
+            </div>
+          </fieldset>
+
+          <div class="filters__group field">
+            <label class="filters__legend" for="type">Тип накопичувача</label>
+            <select class="select" id="type" name="type">
+              <option value="">SSD і HDD</option>
+              <option value="ssd">SSD</option>
+              <option value="hdd">HDD</option>
+            </select>
+          </div>
+        </form>
+      </aside>
+
+      <section class="catalog__main" aria-labelledby="catalog-title">
+        <div class="catalog__head">
+          <h1 id="catalog-title">Накопичувачі SSD та HDD</h1>
+          <div class="sort">
+            <label for="sort">Сортувати за:</label>
+            <select class="select" id="sort" name="sort">
+              <option value="price-asc">Від дешевих до дорогих</option>
+              <option value="price-desc">Від дорогих до дешевих</option>
+              <option value="name">За назвою</option>
+            </select>
+          </div>
+        </div>
+
+        <ul class="product-grid" data-catalog>
+          <li data-id="sn850x" data-name="WD Black SN850X 1TB" data-brand="wd" data-price="3790" data-type="ssd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">WD Black SN850X 1TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: SSD · M.2 NVMe</li>
+                  <li>Об’єм: 1 ТБ</li>
+                  <li>Читання: до 7300 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 3 790 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="sn850x" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="990pro" data-name="Samsung 990 PRO 1TB" data-brand="samsung" data-price="4290" data-type="ssd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Samsung 990 PRO 1TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: SSD · M.2 NVMe</li>
+                  <li>Об’єм: 1 ТБ</li>
+                  <li>Читання: до 7450 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 4 290 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="990pro" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="wd-blue" data-name="WD Blue 2TB" data-brand="wd" data-price="2490" data-type="hdd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">WD Blue 2TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: HDD · 3.5″ SATA</li>
+                  <li>Об’єм: 2 ТБ</li>
+                  <li>Швидкість: до 215 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 2 490 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="wd-blue" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="barracuda" data-name="Seagate BarraCuda 2TB" data-brand="seagate" data-price="2450" data-type="hdd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Seagate BarraCuda 2TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: HDD · 3.5″ SATA</li>
+                  <li>Об’єм: 2 ТБ</li>
+                  <li>Швидкість: до 220 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 2 450 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="barracuda" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="nv2" data-name="Kingston NV2 500GB" data-brand="kingston" data-price="1350" data-type="ssd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Kingston NV2 500GB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: SSD · M.2 NVMe</li>
+                  <li>Об’єм: 500 ГБ</li>
+                  <li>Читання: до 3500 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 1 350 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="nv2" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="870evo" data-name="Samsung 870 EVO 1TB" data-brand="samsung" data-price="3600" data-type="ssd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Samsung 870 EVO 1TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: SSD · 2.5″ SATA</li>
+                  <li>Об’єм: 1 ТБ</li>
+                  <li>Читання: до 560 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 3 600 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="870evo" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="p300" data-name="Toshiba P300 1TB" data-brand="toshiba" data-price="1800" data-type="hdd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Toshiba P300 1TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: HDD · 3.5″ SATA</li>
+                  <li>Об’єм: 1 ТБ</li>
+                  <li>Швидкість: до 190 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 1 800 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="p300" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-id="kc3000" data-name="Kingston KC3000 2TB" data-brand="kingston" data-price="6100" data-type="ssd">
+            <article class="card product-card">
+              <div class="product-card__media">
+                <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+              </div>
+              <div class="product-card__body">
+                <h2 class="product-card__title"><a href="product.html">Kingston KC3000 2TB</a></h2>
+                <ul class="product-card__specs">
+                  <li>Тип: SSD · M.2 NVMe</li>
+                  <li>Об’єм: 2 ТБ</li>
+                  <li>Читання: до 7000 МБ/с</li>
+                </ul>
+                <div class="product-card__footer">
+                  <p class="price">від 6 100 ₴</p>
+                  <button class="btn btn--primary btn--sm" type="button" data-compare-toggle="kc3000" data-label-on="Додано до порівняння" data-label-off="Додати до порівняння" data-class-on="btn--success" data-class-off="btn--primary">Додати до порівняння</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="empty-state" id="catalog-empty" hidden>
+          <p>За вибраними фільтрами нічого не знайдено.</p>
+          <button class="btn btn--outline btn--sm" type="button" id="catalog-reset">Скинути фільтри</button>
+        </div>
+        <p class="visually-hidden" id="catalog-count" role="status"></p>
+      </section>
+    </div>
+
+    <div class="compare-bar">
+      <p class="compare-bar__info"><span class="icon icon--compare" aria-hidden="true"></span><span>Обрано до порівняння: <span data-compare-count>0</span></span></p>
+      <a class="btn btn--primary btn--md" href="compare-storage.html" data-compare-link>Порівняти</a>
+    </div>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>

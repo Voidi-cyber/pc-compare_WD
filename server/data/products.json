@@ -1,0 +1,182 @@
+[
+  {
+    "id": "r5-7600",
+    "category": "cpu",
+    "name": "AMD Ryzen 5 7600",
+    "description": "6 ядер, 12 потоків, 3.8–5.1 ГГц",
+    "price": 14990,
+    "socket": "AM5",
+    "power": 65,
+    "watts": null
+  },
+  {
+    "id": "i5-12400",
+    "category": "cpu",
+    "name": "Intel Core i5-12400",
+    "description": "6 ядер, 12 потоків, 2.5–4.4 ГГц, сокет LGA1700",
+    "price": 14990,
+    "socket": "LGA1700",
+    "power": 65,
+    "watts": null
+  },
+  {
+    "id": "r7-7700x",
+    "category": "cpu",
+    "name": "AMD Ryzen 7 7700X",
+    "description": "8 ядер, 16 потоків, 4.5–5.4 ГГц",
+    "price": 18900,
+    "socket": "AM5",
+    "power": 105,
+    "watts": null
+  },
+  {
+    "id": "i5-13600k",
+    "category": "cpu",
+    "name": "Intel Core i5-13600K",
+    "description": "14 ядер, 20 потоків, 3.5–5.1 ГГц, сокет LGA1700",
+    "price": 14500,
+    "socket": "LGA1700",
+    "power": 125,
+    "watts": null
+  },
+  {
+    "id": "b650",
+    "category": "motherboard",
+    "name": "ASUS B650",
+    "description": "Материнська плата, Socket AM5, DDR5, USB 3.2 Gen 2",
+    "price": 12490,
+    "socket": "AM5",
+    "power": 80,
+    "watts": null
+  },
+  {
+    "id": "z790",
+    "category": "motherboard",
+    "name": "ASUS Z790",
+    "description": "Материнська плата, Socket LGA1700, DDR5, USB 3.2 Gen 2",
+    "price": 15990,
+    "socket": "LGA1700",
+    "power": 80,
+    "watts": null
+  },
+  {
+    "id": "ddr5-16",
+    "category": "ram",
+    "name": "DDR5 16GB",
+    "description": "Оперативна пам’ять, 5200 МГц, C40, 1×16 ГБ",
+    "price": 4990,
+    "socket": null,
+    "power": 35,
+    "watts": null
+  },
+  {
+    "id": "ddr5-32",
+    "category": "ram",
+    "name": "DDR5 32GB",
+    "description": "Оперативна пам’ять, 5600 МГц, C36, 2×16 ГБ",
+    "price": 8990,
+    "socket": null,
+    "power": 45,
+    "watts": null
+  },
+  {
+    "id": "990pro",
+    "category": "ssd",
+    "name": "Samsung 990 PRO 1TB",
+    "description": "NVMe M.2, PCIe 4.0 ×4, 1 ТБ, до 7450 МБ/с",
+    "price": 4490,
+    "socket": null,
+    "power": 5,
+    "watts": null
+  },
+  {
+    "id": "sn850x",
+    "category": "ssd",
+    "name": "WD Black SN850X 1TB",
+    "description": "NVMe M.2, PCIe 4.0 ×4, 1 ТБ, до 7300 МБ/с",
+    "price": 3990,
+    "socket": null,
+    "power": 5,
+    "watts": null
+  },
+  {
+    "id": "barracuda",
+    "category": "ssd",
+    "name": "Seagate BarraCuda 2TB",
+    "description": "HDD 3.5″, SATA III, 2 ТБ, 7200 RPM",
+    "price": 2450,
+    "socket": null,
+    "power": 8,
+    "watts": null
+  },
+  {
+    "id": "psu-550",
+    "category": "psu",
+    "name": "Seasonic Focus 550W",
+    "description": "Блок живлення, 550 Вт, 80+ Gold",
+    "price": 3290,
+    "socket": null,
+    "power": 0,
+    "watts": 550
+  },
+  {
+    "id": "psu-650",
+    "category": "psu",
+    "name": "Corsair RM650",
+    "description": "Блок живлення, 650 Вт, 80+ Gold",
+    "price": 4290,
+    "socket": null,
+    "power": 0,
+    "watts": 650
+  },
+  {
+    "id": "psu-750",
+    "category": "psu",
+    "name": "be quiet! Pure Power 12 M",
+    "description": "Блок живлення, 750 Вт, 80+ Gold",
+    "price": 5190,
+    "socket": null,
+    "power": 0,
+    "watts": 750
+  },
+  {
+    "id": "h5",
+    "category": "case",
+    "name": "NZXT H5 Flow",
+    "description": "Корпус, ATX, Mid-Tower, скляна панель",
+    "price": 3490,
+    "socket": null,
+    "power": 0,
+    "watts": null
+  },
+  {
+    "id": "popair",
+    "category": "case",
+    "name": "Fractal Design Pop Air",
+    "description": "Корпус, ATX, Mid-Tower, перфорована передня панель",
+    "price": 3990,
+    "socket": null,
+    "power": 0,
+    "watts": null
+  },
+  {
+    "id": "ak400",
+    "category": "cooler",
+    "name": "DeepCool AK400",
+    "description": "Кулер для процесора, башта, до 220 Вт TDP",
+    "price": 1290,
+    "socket": null,
+    "power": 10,
+    "watts": null
+  },
+  {
+    "id": "nh-d15",
+    "category": "cooler",
+    "name": "Noctua NH-D15",
+    "description": "Кулер для процесора, двобаштовий, до 250 Вт TDP",
+    "price": 4490,
+    "socket": null,
+    "power": 10,
+    "watts": null
+  }
+]

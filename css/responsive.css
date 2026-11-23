@@ -1,0 +1,276 @@
+/* responsive.css — Адаптивність (desktop-first): брейкпоінти 1024, 768 та 480 px. */
+
+/* ---------- ≤ 1024px ---------- */
+@media (max-width: 1024px) {
+  :root {
+    --fs-hero: 2.75rem;
+  }
+
+  .catalog {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+
+  .catalog__filters,
+  .catalog__main {
+    padding: var(--space-5);
+  }
+
+  .product-grid,
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .builder {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    grid-template-columns: minmax(0, 1fr) 340px;
+  }
+
+  .container--page {
+    padding-inline: var(--space-5);
+  }
+
+  .main-nav ul {
+    gap: var(--space-5);
+  }
+}
+
+/* ---------- ≤ 768px ---------- */
+@media (max-width: 768px) {
+  :root {
+    --fs-hero: 2.25rem;
+    --fs-2xl: 1.75rem;
+    --header-height: 72px;
+  }
+
+  .container,
+  .container--wide,
+  .container--page {
+    padding-inline: var(--space-4);
+  }
+
+  /* Шапка: меню в стовпчик; з JavaScript воно ховається за гамбургером */
+  .site-header__inner {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    padding-block: var(--space-3);
+  }
+
+  .js .burger {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    padding-bottom: var(--space-2);
+  }
+
+  .js .main-nav {
+    display: none;
+  }
+
+  .js .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .main-nav a:not(.btn) {
+    display: block;
+    padding: var(--space-2) 0;
+  }
+
+  .main-nav .btn {
+    width: 100%;
+  }
+
+  /* Сітки */
+  .grid-3,
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .hero {
+    padding-block: var(--space-7) var(--space-6);
+  }
+
+  .hero__text {
+    font-size: var(--fs-base);
+  }
+
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog__filters {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .compare-bar {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-page {
+    padding-inline: var(--space-4);
+  }
+
+  .chat {
+    position: static;
+    height: auto;
+    min-height: 480px;
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .compare-page {
+    padding-top: var(--space-6);
+  }
+
+  .table-note {
+    margin-top: var(--space-5);
+  }
+
+  .tabs {
+    gap: var(--space-4);
+  }
+
+  .tabs__item {
+    font-size: var(--fs-lg);
+  }
+
+  .user__name {
+    font-size: var(--fs-base);
+  }
+
+  .part__title {
+    font-size: var(--fs-lg);
+  }
+
+  .part__price {
+    font-size: var(--fs-base);
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .builder-page {
+    padding-top: var(--space-6);
+  }
+}
+
+/* ---------- ≤ 480px ---------- */
+@media (max-width: 480px) {
+  :root {
+    --fs-hero: 1.875rem;
+  }
+
+  .auth {
+    padding: var(--space-4);
+  }
+
+  .auth-card {
+    padding: var(--space-5) var(--space-4) var(--space-6);
+  }
+
+  .auth-tabs__label {
+    font-size: var(--fs-lg);
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog__main {
+    padding: var(--space-4);
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .component {
+    flex-wrap: wrap;
+  }
+
+  .component .btn {
+    width: 100%;
+  }
+
+  .component--conflict .component__head {
+    justify-content: flex-start;
+  }
+
+  .summary {
+    padding: var(--space-4);
+  }
+
+  .ai-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .part {
+    flex-wrap: wrap;
+  }
+
+  .part__price {
+    width: 100%;
+    text-align: right;
+  }
+
+  .product-actions .btn {
+    width: 100%;
+  }
+
+  .product-info__title {
+    font-size: 1.75rem;
+  }
+
+  .user__info {
+    display: none;
+  }
+
+  .build-card__actions,
+  .build-public__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .build-card__actions .btn,
+  .build-public__footer .btn {
+    width: 100%;
+  }
+
+  .build-card__total {
+    margin-top: var(--space-4);
+  }
+
+  .compare-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .data-table--specs tbody th {
+    width: 140px;
+  }
+}

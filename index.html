@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Порівнюйте та збирайте ПК — PC Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark"><span class="icon icon--cpu" aria-hidden="true"></span></span>PC Compare</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Відкрити меню</span><span class="burger__bar"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Основна навігація">
+        <ul>
+        <li><a href="compare-builds.html">Порівняння</a></li>
+        <li><a href="builder-empty.html">Конструктор</a></li>
+        <li><a href="community.html">Збірки</a></li>
+        <li><a class="btn btn--outline" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="home">
+    <section class="hero container" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title">Порівнюйте та збирайте ПК без помилок</h1>
+      <p class="hero__text">Підбирайте компоненти до вашого бюджету та завдань. Детальна сумісність та рекомендації за 5 хвилин.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="builder-empty.html">Зібрати ПК</a>
+        <a class="btn btn--outline btn--lg" href="compare-builds.html">Порівняти</a>
+      </div>
+    </section>
+
+    <section class="categories container" aria-labelledby="categories-title">
+      <h2 class="categories__title" id="categories-title">Категорії</h2>
+      <ul class="grid-3">
+        <li>
+          <a class="card category-card" href="components.html">
+            <span class="icon-tile" aria-hidden="true"><span class="icon icon--cpu"></span></span>
+            <h3 class="category-card__title">Процесори</h3>
+            <p class="category-card__text">Порівняйте AMD та Intel.</p>
+          </a>
+        </li>
+        <li>
+          <a class="card category-card" href="components-storage.html">
+            <span class="icon-tile" aria-hidden="true"><span class="icon icon--drive"></span></span>
+            <h3 class="category-card__title">SSD/HDD</h3>
+            <p class="category-card__text">Більше швидкості та пам’яті.</p>
+          </a>
+        </li>
+        <li>
+          <a class="card category-card" href="builder-empty.html">
+            <span class="icon-tile" aria-hidden="true"><span class="icon icon--gear"></span></span>
+            <h3 class="category-card__title">Конструктор збірки</h3>
+            <p class="category-card__text">Збирайте сумісний ПК.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2024 PC Compare. Усі права захищені.</p>
+      <ul>
+        <li><a href="404.html">Політика конфіденційності</a></li>
+        <li><a href="404.html">Умови використання</a></li>
+        <li><a href="404.html">Контакти</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/watch.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/server-builds.js"></script>
+</body>
+</html>
