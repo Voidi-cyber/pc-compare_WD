@@ -40,6 +40,12 @@
     PC.qsa("[data-compare-count]").forEach((el) => {
       el.textContent = list.length;
     });
+    /* Накопичувачі: вибір передається в посиланні, тож працює навіть без спільного localStorage */
+    if (storage) {
+      PC.qsa("[data-compare-link]").forEach((link) => {
+        link.setAttribute("href", "compare-storage.html" + (list.length ? "?ids=" + list.map(encodeURIComponent).join(",") : ""));
+      });
+    }
   }
 
   function toggle(id) {
