@@ -1406,3 +1406,24 @@ button.tabs__item {
 .compare-edit {
   margin-top: var(--space-4);
 }
+
+/* ---------- Детальні характеристики комплектуючої ---------- */
+.part-details {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.part-details__prices {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.compare th a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.product-card__title a:hover {
+  text-decoration: underline;
+}

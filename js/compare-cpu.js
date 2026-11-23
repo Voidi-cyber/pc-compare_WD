@@ -29,7 +29,7 @@
     /* Спершу вибір із посилання (?ids=...), інакше — збережений список */
     const fromUrl = new URLSearchParams(window.location.search).get("ids");
     const ids = fromUrl ? fromUrl.split(",").slice(0, PC.compare.max) : PC.compare.get();
-    const cpus = ids.filter((id) => CPUS[id]).map((id) => CPUS[id]);
+    const cpus = ids.filter((id) => CPUS[id]).map((id) => CPUS[id].concat(id));
 
     if (cpus.length < 2) {
       wrap.innerHTML =
@@ -38,7 +38,7 @@
       return;
     }
 
-    const head = cpus.map((c) => '<th scope="col">' + c[0] + "</th>").join("");
+    const head = cpus.map((c) => '<th scope="col"><a href="#" data-part="' + c[10] + '">' + c[0] + "</a></th>").join("");
     const rows = ROWS.map((r) => '<tr><th scope="row">' + r[0] + "</th>" + cpus.map((c) => "<td>" + c[r[1]] + "</td>").join("") + "</tr>").join("");
     const shops = [["Rozetka", 8], ["Prom", 9]]
       .map((s) => '<tr><th scope="row">' + s[0] + "</th>" + cpus.map((c) => "<td>" + price(c[s[1]]) + "</td>").join("") + "</tr>")

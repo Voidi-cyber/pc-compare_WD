@@ -6,9 +6,8 @@
   const storage = document.body.dataset.compareScope === "storage";
   const KEY = storage ? "pc.compare.storage" : "pc.compare";
   const MAX = 4;
-  /* Початковий вибір відповідає прототипу (4 обрані товари) */
-  /* Накопичувачі: спочатку нічого не обрано, у порівнянні лише те, що додав користувач */
-  const DEFAULT = storage ? [] : ["ryzen-5-7600", "i5-13400", "ryzen-5-7600x", "ryzen-9-7950x"];
+  /* Спочатку нічого не обрано: у порівнянні лише те, що додав користувач */
+  const DEFAULT = [];
 
   function get() {
     const saved = PC.storage.get(KEY, null);
@@ -40,10 +39,11 @@
     PC.qsa("[data-compare-count]").forEach((el) => {
       el.textContent = list.length;
     });
-    /* Накопичувачі: вибір передається в посиланні, тож працює навіть без спільного localStorage */
-    if (storage) {
+    /* Вибір передається в посиланні, тож працює навіть без спільного localStorage */
+    {
+      const page = storage ? "compare-storage.html" : "compare.html";
       PC.qsa("[data-compare-link]").forEach((link) => {
-        link.setAttribute("href", "compare-storage.html" + (list.length ? "?ids=" + list.map(encodeURIComponent).join(",") : ""));
+        link.setAttribute("href", page + (list.length ? "?ids=" + list.map(encodeURIComponent).join(",") : ""));
       });
     }
   }

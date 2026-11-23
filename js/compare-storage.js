@@ -26,7 +26,10 @@
   const price = (n) => PC.formatNumber(n) + " ₴";
 
   function render() {
-    const drives = PC.compare.get().filter((id) => DRIVES[id]).map((id) => DRIVES[id]);
+    /* Спершу вибір із посилання (?ids=...), інакше — збережений список */
+    const fromUrl = new URLSearchParams(window.location.search).get("ids");
+    const ids = fromUrl ? fromUrl.split(",").slice(0, PC.compare.max) : PC.compare.get();
+    const drives = ids.filter((id) => DRIVES[id]).map((id) => DRIVES[id].concat(id));
 
     if (drives.length < 2) {
       wrap.innerHTML =
@@ -35,7 +38,7 @@
       return;
     }
 
-    const head = drives.map((d) => '<th scope="col">' + esc(d[0]) + "<br>" + esc(d[1]) + "</th>").join("");
+    const head = drives.map((d) => '<th scope="col"><a href="#" data-part="' + d[12] + '">' + esc(d[0]) + "</a><br>" + esc(d[1]) + "</th>").join("");
     const rows = ROWS.map((r) => '<tr><th scope="row">' + r[0] + "</th>" + drives.map((d) => "<td>" + esc(d[r[1]]) + "</td>").join("") + "</tr>").join("");
     const shops = [["Rozetka", 10], ["Prom", 11]]
       .map((s) => '<tr><th scope="row">' + s[0] + "</th>" + drives.map((d) => "<td>" + price(d[s[1]]) + "</td>").join("") + "</tr>")
